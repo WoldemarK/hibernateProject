@@ -28,6 +28,7 @@ public class BankCardDAO {
         return cardOptional.orElseThrow(() ->
                 new General(String.format("Запрашиваемого ID %d не существует", id)));
     }
+
     @Transactional
     public BankCard createBankCard(BankCard bankCard) {
         Session session = sessionFactory.getCurrentSession();

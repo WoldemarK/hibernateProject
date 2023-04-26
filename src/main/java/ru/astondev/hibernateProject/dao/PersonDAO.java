@@ -28,6 +28,7 @@ public class PersonDAO {
         return optional.orElseThrow(()->
                 new General(String.format("Запрашиваемого ID %d не существует", id)));
     }
+
     @Transactional
     public Person createPerson(Person person) {
         Session session = sessionFactory.getCurrentSession();

@@ -24,6 +24,7 @@ public class Person  {
     @NotEmpty(message = "Имя не должно быть пустым")
     @Size(min = 2, max = 50, message = "Имя должно быть минимум 2 символа максимум 50")
     private String name;
+
     @Column(name = "age")
     @Min(value = 18, message = "Возраст должен быть больше 18")
     private int age;

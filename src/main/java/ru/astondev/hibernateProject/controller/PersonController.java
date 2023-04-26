@@ -16,6 +16,7 @@ public class PersonController {
     public List<Person> getAll() {
         return personDAO.getAllPerson();
     }
+
     @GetMapping("/{id}")
     public Person getById(@PathVariable("id") Long id) {
         return personDAO.getById(id);

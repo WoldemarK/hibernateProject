@@ -19,6 +19,7 @@ public class BankCard {
     @JsonIgnore
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person person;
+
     @Override
     public String toString() {
         return "BankCard{" +

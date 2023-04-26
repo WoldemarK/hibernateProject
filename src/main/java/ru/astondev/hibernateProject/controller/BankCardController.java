@@ -18,6 +18,7 @@ public class BankCardController {
     public List<BankCard> getAll() {
         return bankCardDAO.getAllBankCard();
     }
+
     @GetMapping("/{id}")
     public BankCard getById(@PathVariable("id") Long id) {
         return bankCardDAO.getById(id);
