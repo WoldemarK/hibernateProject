@@ -14,22 +14,18 @@ import java.util.List;
 @RequestMapping("/bank")
 public class BankCardController {
     private final BankCardDAO bankCardDAO;
-
     @GetMapping
     public List<BankCard> getAll() {
         return bankCardDAO.getAllBankCard();
     }
-
     @GetMapping("/{id}")
     public BankCard getById(@PathVariable("id") Long id) {
         return bankCardDAO.getById(id);
     }
-
     @PostMapping("/new")
     public BankCard newBankCard(@RequestBody BankCard bankCard) {
         return bankCardDAO.createBankCard(bankCard);
     }
-
     @DeleteMapping("/{id}")
     public void delete(@PathVariable("id") Long id) {
         bankCardDAO.deleteByIdBankCard(id);

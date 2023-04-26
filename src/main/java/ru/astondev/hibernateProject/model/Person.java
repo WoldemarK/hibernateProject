@@ -27,11 +27,9 @@ public class Person  {
     @Column(name = "age")
     @Min(value = 18, message = "Возраст должен быть больше 18")
     private int age;
-
     @OneToMany(mappedBy = "person",fetch = FetchType.LAZY)
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private List<BankCard> bankCards;
-
     public void addBankCard(BankCard bankCard) {
         if (this.bankCards == null)
             this.bankCards = new ArrayList<>();
@@ -39,7 +37,6 @@ public class Person  {
         bankCard.setPerson(this);
 
     }
-
     @Override
     public String toString() {
         return "Person{" +
