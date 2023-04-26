@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import javax.persistence.*;
 @Data
 @Entity
+@Table(name = "bankcard")
 @RequiredArgsConstructor
 public class BankCard {
     @Id
