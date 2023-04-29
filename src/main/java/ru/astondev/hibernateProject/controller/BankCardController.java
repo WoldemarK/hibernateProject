@@ -3,9 +3,7 @@ package ru.astondev.hibernateProject.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import ru.astondev.hibernateProject.dao.BankCardDAO;
-import ru.astondev.hibernateProject.dao.PersonDAO;
 import ru.astondev.hibernateProject.model.BankCard;
-import ru.astondev.hibernateProject.model.Person;
 
 import java.util.List;
 
