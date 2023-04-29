@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import javax.persistence.*;
 @Data
 @Entity
+@Table(name = "bankcard")
 @RequiredArgsConstructor
 public class BankCard {
     @Id
@@ -16,7 +17,6 @@ public class BankCard {
     @Column(name = "name")
     private String name;
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person person;
 
