@@ -1,6 +1,8 @@
 package ru.astondev.hibernateProject.config;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +15,7 @@ import java.util.Properties;
 @Configuration
 @ComponentScan("ru.astondev")
 @RequiredArgsConstructor
+@EnableAutoConfiguration(exclude = HibernateJpaAutoConfiguration.class)
 @PropertySource("classpath:hibernate.properties")
 public class SpringConfig {
     private final Environment env;
