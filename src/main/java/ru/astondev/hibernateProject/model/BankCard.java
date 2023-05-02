@@ -1,6 +1,6 @@
 package ru.astondev.hibernateProject.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -17,6 +17,7 @@ public class BankCard {
     @Column(name = "name")
     private String name;
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person person;
 

@@ -1,5 +1,6 @@
 package ru.astondev.hibernateProject.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +29,7 @@ public class Person  {
     @Column(name = "age")
     @Min(value = 18, message = "Возраст должен быть больше 18")
     private int age;
-    @JsonIgnore
+    @JsonBackReference
     @OneToMany(mappedBy = "person")
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private List<BankCard> bankCards;
